@@ -1,4 +1,4 @@
-/* Ejercicio 1 - Suma*/
+/* Ejercicio 1 - Suma
 
 const numero1 = Number(prompt("Introduce un numero"));
 const numero2 = Number(prompt("Introduce un numero"));
@@ -8,6 +8,8 @@ let resultado;
 resultado = numero1 + numero2;
 
 console.log(`El resultado es ${resultado}`);
+
+*/
 
 /********/
 
