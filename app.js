@@ -1,4 +1,4 @@
-/* Ejercicio 1 - Suma
+/* Ejercicio 1 - Suma*/
 
 const numero1 = Number(prompt("Introduce un numero"));
 const numero2 = Number(prompt("Introduce un numero"));
@@ -7,7 +7,7 @@ let resultado;
 
 resultado = numero1 + numero2;
 
-console.log(`El resultado es ${resultado}`);*/
+console.log(`El resultado es ${resultado}`);
 
 /********/
 
@@ -231,65 +231,72 @@ function salarioTotal() {
 
 /********/
 
-/* Ejercicio 13 - Calificación de alumnos N */
+/* Ejercicio 13 - Calificación de alumnos N 
 
-calificacion();
+alumnos();
 
-function calificacion() {
+function alumnos() {
 	const n = Number(prompt("Introduzca el número de alumnos:"));
-	desaprobado = 0;
-	aprobado = 0;
+	let desaprobado = 0;
+	let aprobado = 0;
 
 	if (isNaN(n)) {
 		console.log(`Introduzca un número válido`);
 		return;
 	}
 
+	if (n <= 0) {
+		console.log(`Introduzca un número válido`);
+		return;
+	}
+
 	const nota = Number(prompt("Introduzca nota:"));
+	const nota2 = Number(prompt("Introduzca nota:"));
+	const nota3 = Number(prompt("Introduzca nota:"));
+
+	if (nota > 20) {
+		console.log(`Ingrese un número menor a 20`);
+		return;
+	}
 
 	if (nota <= 12.5) {
 		desaprobado = desaprobado + 1;
-	} else if (nota > 20) {
-		console.log(`Ingrese un número menor a 20`);
-		return;
 	} else {
 		aprobado = aprobado + 1;
 	}
-
-	/* SEGEUNDA NOTA */
-
-	const nota2 = Number(prompt("Introduzca nota:"));
-
+	if (nota2 > 20) {
+		console.log(`Ingrese un número menor a 20`);
+		return;
+	}
 	if (nota2 <= 12.5) {
 		desaprobado = desaprobado + 1;
-	} else if (nota2 > 20) {
-		console.log(`Ingrese un número menor a 20`);
-		return;
 	} else {
 		aprobado = aprobado + 1;
 	}
-
-	/* TERCERA NOTA */
-
-	const nota3 = Number(prompt("Introduzca nota:"));
-
-	if (nota3 <= 12.5) {
-		desaprobado = desaprobado + 1;
-	} else if (nota3 > 20) {
+	if (nota3 > 20) {
 		console.log(`Ingrese un número menor a 20`);
 		return;
+	}
+	if (nota3 <= 12.5) {
+		desaprobado = desaprobado + 1;
 	} else {
 		aprobado = aprobado + 1;
 	}
 
 	let promedio;
 
-	promedio = (nota + nota2 + nota3) / n;
+	promedio = Math.round((nota + nota2 + nota3) / n);
+
+	if (promedio >= 12.5) {
+		console.log(`El promedio es: ${promedio}, han aprobado.`);
+	} else {
+		console.log(`El promedio es: ${promedio}, NO han aprobado.`);
+	}
 
 	console.log(`Los aprobados son ${aprobado} `);
 	console.log(`Los desaprobados son ${desaprobado} `);
-	console.log(`El promedio es: ${promedio}`);
 }
+*/
 
 /********/
 
