@@ -1,4 +1,4 @@
-/* Ejercicio 1 - Suma
+/* Ejercicio 1 - Sumatoria
 
 const numero1 = Number(prompt("Introduce un numero"));
 const numero2 = Number(prompt("Introduce un numero"));
